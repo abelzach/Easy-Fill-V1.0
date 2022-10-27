@@ -14,14 +14,16 @@ function getFocused () {
 function Replace(){
     let comm = [];
     let snipp = [];
-    chrome.storage.local.get(['Command'], function (result) {
-        for (let i = 0; i < size.length; i++){
-            
+    console.log("Inside Replace");
+    chrome.storage.local.get({userKeyIds: []}, function(result) {
+        for(let i=0;i<result.userKeyIds.length;i++){
+            console.log(result.userKeyIds[i].command+ "  ");
+            regexp = new RegExp("/result.userKeyIds[i].command", "g");
+            var v = document.getElementById(element1).textContent;
+            v = v.replace(regexp, "result.userKeyIds[i].snippet");
+            document.getElementById(element1).textContent = v;
         }
     });
 
-    regexp = new RegExp("/add", "g");
-    var v = document.getElementById(element1).textContent;
-    v = v.replace(regexp, "node_address");
-    document.getElementById(element1).textContent = v;
+    
 }

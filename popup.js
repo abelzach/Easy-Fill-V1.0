@@ -30,7 +30,13 @@ function AddCommand(){
 }
 
 function GetCommand(){
+    // chrome.storage.local.get({userKeyIds: []}, function(result) {
+    //     alert(JSON.stringify(result.userKeyIds));
+    // });
     chrome.storage.local.get({userKeyIds: []}, function(result) {
-        alert(JSON.stringify(result.userKeyIds));
+        for(var i=0;i<result.userKeyIds.length;i++){
+            console.log(result.userKeyIds[i].command);
+            console.log(result.userKeyIds[i].snippet);
+        }
     });
 }

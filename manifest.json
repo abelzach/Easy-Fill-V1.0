@@ -5,11 +5,9 @@
   "description"     : "Convert text into commands for easy workflow",
   "incognito": "split",
   "action": {
-    "default_popup":"popup.html"
+    "default_popup" : "popup.html"
   },
   "permissions": [
     "storage"
-  ],
-
-  "content_security_policy" : "script-src 'self' 'unsafe-eval'"
+  ]
 }

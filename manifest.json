@@ -3,8 +3,14 @@
   "name"            : "EasyFill",
   "version"         : "1.0.0",
   "description"     : "Convert text into commands for easy workflow",
-
+  "incognito": "split",
   "browser_action": {
     "default_title": "EasyFill"
-  }
+  },
+  "action": {
+    "default_popup":"popup.html"
+  },
+  "permissions": [
+    "storage"
+  ]
 }

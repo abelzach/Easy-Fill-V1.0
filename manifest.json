@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "name"            : "EasyFill",
+  "version"         : "1.0.0",
+  "description"     : "Convert text into commands for easy workflow",
+
+  "browser_action": {
+    "default_title": "EasyFill"
+  }
+}

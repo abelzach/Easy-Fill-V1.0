@@ -15,12 +15,14 @@ function AddCommand(){
     //     alert('Success');
     //   });
       
-    chrome.storage.local.get(['Command'], function (result) {
-        var userKeyIds = [result.Command];
+    chrome.storage.local.get({userKeyIds: []}, function (result) {
+        
+        // userKeyIds.push(result.Command);
         //alert(JSON.stringify(userKeyIds));
+        var userKeyIds = result.userKeyIds;
         userKeyIds.push(savedCommands);
         alert(userKeyIds);
-        chrome.storage.local.set({'Command': userKeyIds}, function() {
+        chrome.storage.local.set({userKeyIds : userKeyIds}, function() {
             alert('Success');
         });
     });
@@ -28,7 +30,7 @@ function AddCommand(){
 }
 
 function GetCommand(){
-    chrome.storage.local.get(['Command'], function(result) {
-        alert('Value currently is ' + JSON.stringify(result.Command));
+    chrome.storage.local.get({userKeyIds: []}, function(result) {
+        alert(JSON.stringify(result.userKeyIds));
     });
 }

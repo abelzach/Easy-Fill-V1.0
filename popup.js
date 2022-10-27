@@ -1,33 +1,25 @@
 document.addEventListener("DOMContentLoaded", ()=> {
 
-document.getElementById("Button").addEventListener("click", AddCommand);    
-    function AddCommand(){
-        var command = document.getElementById("command").value;
-        var snippet = document.getElementById("snippet").value;
-        console.log(snippet.value);
-        submitOK = true;
-        if(snippet.value < 0)
-        {
-            alert("Snippet cannot be empty");
-            sumbitOK = False;
-        }
-        if(command.value < 0)
-        {
-            alert("Command cannot be empty");
-            submitOK = false;
-        }
-
-        if(submitOK == true){
-            chrome.storage.local.set({command: snippet}, () => {
-                if (chrome.runtime.lastError)
-                    console.log('Error setting');
-    
-                console.log('Stored snippet: ' + snippet.name);
-            });
-        }
-        
-        if(submitOK == false){
-            alert("Retry");
-        }
-    }
+document.getElementById('save').addEventListener("click", AddCommand);    
 })
+
+function AddCommand(){
+    var com = document.getElementById("command").value;
+    var snpt = document.querySelector('#snippet').value;
+    alert(com);
+    let savedCommands = {
+        command : com,
+        snippet: snpt
+    }
+    alert(savedCommands);
+    let savedData;
+    if(localStorage.getItem('data' === null)){
+        savedData = [savedCommands]
+    }
+    else{
+        savedData = JSON.parse(localStorage.getItem('data'));
+        savedData.push(savedCommands);
+        localStorage.setItem('data', JSON.stringify(savedData));
+    }
+    location.href = "popup.html";
+}

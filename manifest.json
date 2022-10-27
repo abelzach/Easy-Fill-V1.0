@@ -3,11 +3,11 @@
   "name"            : "EasyFill",
   "version"         : "1.0.0",
   "description"     : "Convert text into commands for easy workflow",
-  "incognito": "split",
   "action": {
     "default_popup" : "popup.html"
   },
   "permissions": [
-    "storage"
+    "unlimitedStorage",
+    "tabs"
   ]
 }

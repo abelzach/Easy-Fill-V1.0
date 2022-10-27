@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="popup.js"></script>
+    <script src="snippet.js"></script>
     <title>EasyFill</title>
 </head>
 <body>
@@ -34,17 +34,10 @@
         
     </div>
     
-    <div class="commands">
-    <form class="form-horizontal" action="/action_page.php">
-        <label class = "heading"  for="Command">Command</label>
-        <input type="text" id="command" name="command"><br><br>
-        <label  class = "heading" for="lname"> Snippet</label>
-        <input type="text" id="snippet" name="snippet"><br><br>
-        <input type="button" id="save" value="Submit">
-        <input type="button" id="get" value="Get Value">
 
-      </form>
-    </div>
+        <div id="command"> </div>
+        <div id="description"></div>
+        <input type="button" id="get" value="Get Value">
     
 </body>
 </html>

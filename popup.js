@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", ()=> {
 
 document.getElementById('save').addEventListener("click", AddCommand);
-document.getElementById('get').addEventListener("click", AddCommand);   
+document.getElementById('get').addEventListener("click", GetCommand);   
 })
 
 function AddCommand(){
@@ -18,3 +18,8 @@ function AddCommand(){
     location.href = "popup.html";
 }
 
+function GetCommand(){
+    chrome.storage.local.get(['Command'], function(result) {
+        alert('Value currently is ' + JSON.stringify(result.Command));
+    });
+}

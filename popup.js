@@ -21,9 +21,9 @@ function AddCommand(){
         //alert(JSON.stringify(userKeyIds));
         var userKeyIds = result.userKeyIds;
         userKeyIds.push(savedCommands);
-        alert(userKeyIds);
+        //alert(userKeyIds);
         chrome.storage.local.set({userKeyIds : userKeyIds}, function() {
-            alert('Success');
+            //alert('Success');
         });
     });
     location.href = "popup.html";

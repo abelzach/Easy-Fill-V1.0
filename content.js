@@ -17,10 +17,10 @@ function Replace(){
     console.log("Inside Replace");
     chrome.storage.local.get({userKeyIds: []}, function(result) {
         for(let i=0;i<result.userKeyIds.length;i++){
-            console.log(result.userKeyIds[i].command+ "  ");
-            regexp = new RegExp(String(result.userKeyIds[i].command), "g");
+            //console.log(result.userKeyIds[i].command+ "  ");
+            regexp = new RegExp(String(result.userKeyIds[i].command));
             var v = document.getElementById(element1).textContent;
-            v = v.replace(regexp, String(result.userKeyIds[i].snippet));
+            v = v.replace(regexp, "\n"+String(result.userKeyIds[i].snippet)+" ");
             document.getElementById(element1).textContent = v;
         }
     });

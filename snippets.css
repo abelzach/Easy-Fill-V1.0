@@ -1,0 +1,71 @@
+body {
+    
+    height: 370px;
+    width: 280px;
+    font-family: 'Inter', sans-serif;
+
+}
+
+
+.title {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+.title1
+{
+    color:black;
+}
+
+.title2
+{
+    color: #17CB9E;
+}
+
+
+
+.tab
+{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin: 20px 20px;
+}
+
+
+.tab a
+{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+    color: rgb(121, 121, 121);
+}
+
+#commandsContainer {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.commandHead {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+.snippetDiv {
+    background-color: rgb(232, 232, 232);
+}
+
+.snippetContent {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 16px;
+    font-size: 16px;
+
+}

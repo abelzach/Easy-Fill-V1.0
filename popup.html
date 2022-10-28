@@ -5,6 +5,9 @@
     <meta http-equiv="Content-Security-Policy" script-src='unsafe-inline';>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="popup.js"></script>
     <title>EasyFill</title>
@@ -24,11 +27,11 @@
     </div>
 
     <div class="tab">
-        <a href="Snippets.html">
+        <a href="Snippets.html" class = "snippetsTab">
             <div>Snippets</div>
         </a>
         
-        <a href="popup.html">
+        <a href="popup.html" class="addTab">
             <div>Add Snippets</div>
         </a>
         
@@ -37,11 +40,11 @@
     <div class="commands">
     <form class="form-horizontal" action="/action_page.php">
         <label class = "heading"  for="Command">Command</label>
-        <input type="text" id="command" name="command"><br><br>
+        <input type="text" id="command" name="command" placeholder="   / + Add your comment"><br><br>
         <label  class = "heading" for="lname"> Snippet</label>
-        <input type="text" id="snippet" name="snippet"><br><br>
-        <input type="button" id="save" value="Submit">
-        <input type="button" id="get" value="Get Value">
+        <input type="text" id="snippet" name="snippet" placeholder="   Add your text"><br><br>
+        <input type="button" id="save" value="Add command">
+        <!-- <input type="button" id="get" value="Get Value"> -->
 
       </form>
     </div>

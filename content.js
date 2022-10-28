@@ -1,5 +1,6 @@
 window.onload = () => {
 document.body.addEventListener("click", getFocused);
+Replace();
 }
 var element1;
 
@@ -8,7 +9,7 @@ function getFocused () {
     if(element === "INPUT" || element === "DIV"){
         element1 = document.activeElement.id;
     }
-    Replace();
+    //Replace();
 }
 
 function Replace(){
@@ -21,7 +22,7 @@ function Replace(){
             regexp = new RegExp(String(result.userKeyIds[i].command), "g");
             var v = document.getElementById(element1).textContent;
             v = v.replace(regexp, String(result.userKeyIds[i].snippet));
-            document.getElementById(element1).textContent = v;
+            document.getElementById(element1).innerHTML = v;
         }
     });
 

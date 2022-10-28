@@ -3,7 +3,7 @@ body {
     height: 370px;
     width: 280px;
     font-family: 'Inter', sans-serif;
-
+    overflow : auto ;
 }
 
 

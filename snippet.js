@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", ()=> {
     const commandsContainer = document.querySelector('#commandsContainer')
-    document.getElementById('get').addEventListener("click", GetCommand);   
+  //  document.getElementById('get').addEventListener("click", GetCommand);   
     chrome.storage.local.get({userKeyIds: []}, function(result) {
         for(var i=0;i<result.userKeyIds.length;i++){
             console.log(result.userKeyIds[i].command);

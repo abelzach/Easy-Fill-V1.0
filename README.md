@@ -5,8 +5,8 @@
 A productivity tool for saving huge chunks of text as symbol snippets as commands.
 ## Team Members
 [1. Abel Simon Zachariah](abelzach)   
-[2.Diya James](DiyaJames)   
-[3.Abijith Vasanthakumar](Abjcodes)   
+[2. Diya James](DiyaJames)   
+[3. Abijith Vasanthakumar](Abjcodes)   
 
 ## Link to Project
 [Embed the live link of project](live_link)

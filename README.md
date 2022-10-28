@@ -9,7 +9,7 @@ A productivity tool for saving huge chunks of text as symbol snippets as command
 [3. Abijith Vasanthakumar](Abjcodes)   
 
 ## Link to Project
-[Embed the live link of project](live_link)
+[Devfolio link](https://devfolio.co/projects/easyfill-115f)
 
 ## How it Works ?
 The chrome extension will store the command as well as the text snippet into the local storage. The extension automatically detects the command in the input field and replaces it using regex.  

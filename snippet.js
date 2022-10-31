@@ -27,7 +27,13 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
     
     function GetCommand(){
-        chrome.storage.local.get(['Command'], function(result) {
-            alert('Value currently is ' + JSON.stringify(result.Command));
-        });   
+        // chrome.storage.local.get(['Command'], function(result) {
+        //     console.log('Value currently is ' + JSON.stringify(result.Command));
+        // }); 
+        chrome.storage.local.get({userKeyIds: []}, function(result) {
+            for(var i=0;i<result.userKeyIds.length;i++){
+                console.log(result.userKeyIds[i].command);
+                console.log(result.userKeyIds[i].snippet);
+            }
+        });  
     }
